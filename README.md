@@ -2,6 +2,8 @@
 
 Chatbot pédagogique pour développer l'esprit critique scientifique, déployé de manière sécurisée sur Vercel avec une architecture frontend/backend.
 
+Test commit for Vercel deployment.
+
 ## Architecture
 
 - **Frontend** : Interface HTML/CSS/JS statique
