@@ -1,0 +1,18 @@
+{
+  "name": "fake-ou-science-chatbot",
+  "version": "1.0.0",
+  "description": "Secure chatbot for scientific critical thinking deployed on Vercel",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "vercel dev"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "keywords": ["chatbot", "education", "critical-thinking", "vercel"],
+  "author": "",
+  "license": "MIT"
+}
