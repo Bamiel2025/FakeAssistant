@@ -24,10 +24,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'API key not configured' });
   }
 
-  // Include system prompt in contents as the first message
-  const systemPrompt = systemInstruction.parts[0].text;
-  const fullContents = [{ role: 'user', parts: [{ text: systemPrompt }] }, ...contents];
-
   try {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`, {
       method: 'POST',
@@ -35,7 +31,8 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        contents: fullContents,
+        contents,
+        systemInstruction,
       }),
     });
 
